@@ -26,12 +26,12 @@ list_serie(Director, Categories, Min, Max, Stream, Theme, S) :-
     list_serie(Director, Categories, Min, Max, Stream, Theme, [], S).
 
 list_serie(Director, Categories, Min, Max, Stream, Theme, Acc, S) :-
-    serie(Serie, Director, Category, Length, Streamings, Themes),
+    serie(Serie, Director, Category, Episodes, Streamings, Themes),
     elems(Theme, Themes),
     elem(Stream, Streamings),
     elem(Category, Categories),
-    Length > Min - 1,
-    Length < Max + 1,
+    Episodes > Min - 1,
+    Episodes < Max + 1,
     \+ elem(Serie, Acc), !,
     list_serie(Director, Categories, Min, Max, Stream, Theme, [Serie | Acc], S).
 
@@ -59,14 +59,15 @@ suggest_serie(S) :-
     read(Mood),
     write('Choose a director from:\n    (List of directors)\n'),
     read(Director),
-    write('Choose your streaming platform: \n   netflix   hbogo   prime   disney:\n'),
+    write('Choose your streaming platform: \n   netflix   disney:\n'), % Removed hbogo and prime for simplicity
     read(Stream),
-    write('Type minimum length of series in minutes: '),
+    write('Type minimum number of episodes: '),
     read(Min),
-    write('Type maximum length of series in minutes: '),
+    write('Type maximum number of episodes: '),
     read(Max),
     get_theme(Mood, Theme),
     list_serie(Director, Categories, Min, Max, Stream, Theme, S).
+
 suggest_movie(M) :-
     write('Type your age: '),
     read(Age),
@@ -180,7 +181,25 @@ movie(hotel_transylvania_transformania, derek_drymon, pg, 87, [prime], [animatio
 movie(doctor_strange_in_the_multiverse_of_madness, sam_raimi, pg13, 139, [disney], [action, adventure, fantasy, horror, sci-fi]).
 
 %-------------------------------------------
-serie(breaking_bad, vince_gilligan, r, 60, [netflix], [crime, drama, thriller]).
-serie(stranger_things, matt_duffer, pg13, 50, [netflix], [drama, fantasy, horror, mystery, sci-fi, thriller]).
-serie(the_crown, peter_morgan, pg13, 58, [netflix], [biography, drama, history]).
-serie(the_mandalorian, jon_favreau, pg13, 40, [disney], [action, adventure, fantasy, sci-fi]).
+% DATABASE_OF_SERIES
+
+serie(black_mirror, charlie_brooker, pg13, 22, [netflix], [drama, sci-fi, thriller]).
+serie(fleabag, phoebe_waller_bridge, pg13, 12, [prime], [comedy, drama]).
+serie(the_office, greg_daniels, pg, 9, [prime], [comedy]).
+serie(stranger_things, matt_duffer, pg13, 25, [netflix], [drama, fantasy, horror, mystery, sci-fi, thriller]).
+serie(the_mandalorian, jon_favreau, pg13, 16, [disney], [action, adventure, fantasy, sci-fi]).
+serie(breaking_bad, vince_gilligan, r, 62, [netflix], [crime, drama, thriller]).
+serie(friends, david_crane, pg, 10, [netflix], [comedy, romance]).
+serie(fleabag, phoebe_waller_bridge, pg13, 12, [prime], [comedy, drama]).
+serie(the_queens_gambit, scott_frank, pg13, 7, [netflix], [drama]).
+serie(the_crown, peter_morgan, pg13, 40, [netflix], [biography, drama, history]).
+serie(the_witcher, lauren_schmidt_hissrich, r, 8, [netflix], [action, adventure, drama, fantasy, mystery]).
+serie(the_big_bang_theory, chuck_lorre, pg13, 12, [netflix], [comedy, romance]).
+serie(mindhunter, joe_penhall, r, 19, [netflix], [crime, drama, thriller]).
+serie(brooklyn_nine_nine, michael_schur, pg13, 22, [netflix], [comedy, crime]).
+serie(peaky_blinders, steven_knight, r, 30, [netflix], [crime, drama]).
+serie(rick_and_morty, dan_harmon, pg13, 10, [netflix], [animation, adventure, comedy, sci-fi]).
+serie(the_walking_dead, frank_darabont, r, 177, [netflix], [drama, horror, thriller]).
+serie(narcos, chris_brancato, r, 30, [netflix], [biography, crime, drama, thriller]).
+serie(ozark, bill_dubuque, ma, 36, [netflix], [crime, drama, thriller]).
+serie(the_umbrella_academy, steve_blackman, r, 20, [netflix], [action, adventure, comedy, drama, fantasy, sci-fi]).
