@@ -1,6 +1,6 @@
-### **Prolog Movie and Series Recommendation System**
-**Overview**
-This Prolog project is a movie and series recommendation system that suggests personalized movies or series based on user preferences such as age, mood, preferred director, and streaming platform. The system utilizes a database of movies and series, and it allows users to input their criteria to receive tailored recommendations.
+# Prolog Movie and Series Recommendation System
+
+This Prolog project is a movie and series recommendation system that suggests personalized movies or series based on user preferences such as age, mood, preferred director, and streaming platform. The system utilizes a database of movies and series, and it allows users to input their criteria to receive recommendations.
 
 **Contents**
 
@@ -8,23 +8,29 @@ This Prolog project is a movie and series recommendation system that suggests pe
 - Prerequisites
 
 Prolog interpreter (e.g., SWI-Prolog) installed on your machine.
-Usage
-Clone the repository to your local machine.
-Open the Prolog interpreter in the terminal.
-Load the main Prolog file: consult('recommendation_system.pl').
-Run the recommendation system: suggest_movie_or_serie(M).
+
+- Usage
+
+- [ ] Clone the repository to your local machine.
+
+- [ ] Open the Prolog interpreter in the terminal.
+
+- [ ] Load the main Prolog file: consult('recommendation_system.pl').
+
+- [ ] Run the recommendation system: suggest_movie_or_serie(M).
 
 - Project Structure
 
-recommendation_system.pl: The main Prolog file containing predicates for recommendation and user interaction.
-movies.pl: Database of movies.
-series.pl: Database of series.
+recommendation_system.pl: The main Prolog file containing predicates for recommendation and user interaction, as well as the databases of movies and series.
 
 - Features
 
-User-friendly interface for inputting preferences.
-Personalized movie and series recommendations based on user criteria.
-Modular design for easy maintenance and updates.
+> - [ ]  User-friendly interface for inputting preferences.
+
+> - [ ] Personalized movie and series recommendations based on user criteria.
+
+> - [ ] Modular design for easy maintenance and updates.
+
 
 - How It Works
 
@@ -34,7 +40,9 @@ The system utilizes Prolog predicates to filter and recommend movies or series b
 
 - Example Usage
 
-prolog
+prolog :
+
+
 
 
 ```
