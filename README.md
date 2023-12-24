@@ -50,19 +50,56 @@ prolog :
 Choose one option:
    1. Movie
    2. Short Series
-1.      % User chooses Movie
-Type your age: 25.
-Choose your mood:
+|: 1.
+Type your age: |: 20.
+Choose your mood: 
    happy   sad   angry   scared
-happy.
+|: happy.
 Choose a director from:
-    (List of directors)
-Christopher Nolan.
-Choose your streaming platform:
-   netflix   hbogo   prime   disney:
-netflix.
-Type minimum length of film in minutes: 120.
-Type maximum length of film in minutes: 180.
-
-M = [interstellar, tenet, inception, the_dark_knight, the_prestige, memento, dunkirk].
+List of Movie Directors:
+ridley_scott
+andrew_adamson
+taika_waititi
+george_lucas
+zack_snyder
+steven_spielberg
+richard_lester
+bernardo_bertolucci
+christopher_nolan
+roger_michell
+rian_johnson
+oriol_paulo
+francis_ford_coppola
+quentin_tarantino
+robert_zemeckis
+ron_howard
+brad_bird
+james_cameron
+sam_mendes
+james_marshal
+todd_phillips
+andrew_stanton
+david_fincher
+nathan_greno
+frank_darabont
+peter_jackson
+nancy_meyers
+mark_osborne
+kelly_asbury
+clint_eastwood
+nick_cassavetes
+david_russell
+|: kelly_asbury.
+Choose your streaming platform: 
+   netflix   hbogo   prime   disney : 
+|: netflix.
+Type minimum length of film in minutes: |: 20.
+Type maximum length of film in minutes: |: 180.
+Choose the origin: 
+   usa   uk  .... 
+|: usa.
+Choose the main actor's gender: 
+   male   female   diverse
+|: male.
+M = [spirit_stallion_of_the_cimarron]
 ```
