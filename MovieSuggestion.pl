@@ -37,6 +37,17 @@ list_serie(Director, Categories, Min, Max, Stream, Theme, Acc, S) :-
 
 list_serie(_, _, _, _, _, _, S, S).
 
+%start:
+start :-
+  write('Expert System : Film Recommender'), nl,
+    write('Find films or short series based on your preferences'), nl,
+    write('What is your name? '),
+    read(Name), nl,
+    write('Hello '),
+    write(Name), nl,
+    suggest_movie_or_serie(_).
+
+
 % Suggest movie or series to a user
 suggest_movie_or_serie(M) :-
     write('Choose one option:\n   1. Movie\n   2. Short Series\n'),
@@ -75,6 +86,7 @@ suggest_movie(M) :-
     write('Choose your mood: \n   happy   sad   angry   scared\n'),
     read(Mood),
     write('Choose a director from:\n    (List of directors)\n'),
+    list_directors,
     read(Director),
     write('Choose your streaming platform: \n   netflix   hbogo   prime   disney:\n'),
     read(Stream),
@@ -203,3 +215,35 @@ serie(the_walking_dead, frank_darabont, r, 177, [netflix], [drama, horror, thril
 serie(narcos, chris_brancato, r, 30, [netflix], [biography, crime, drama, thriller]).
 serie(ozark, bill_dubuque, ma, 36, [netflix], [crime, drama, thriller]).
 serie(the_umbrella_academy, steve_blackman, r, 20, [netflix], [action, adventure, comedy, drama, fantasy, sci-fi]).
+
+
+list_directors :-
+    writeln('List of directors:'),
+    writeln('1. ridley_scott        15. brad_bird'),
+    writeln('2. andrew_adamson      16. james_cameron'),
+    writeln('3. taika_waititi       17. sam_mendes'),
+    writeln('4. george_lucas        18. james_marshal'),
+    writeln('5. zack_snyder         19. todd_phillips'),
+    writeln('6. steven_spielberg    20. andrew_stanton'),
+    writeln('7. richard_lester      21. david_fincher'),
+    writeln('8. bernardo_bertolucci 22. nathan_greno'),
+    writeln('9. christopher_nolan   23. frank_darabont'),
+    writeln('10. roger_michell      24. peter_jackson'),
+    writeln('11. rian_johnson       25. nancy_meyers'),
+    writeln('12. oriol_paulo        26. mark_osborne'),
+    writeln('13. drancis_ford_coppola 27. kelly_asbury'),
+    writeln('14. quentin_tarantino  28. clint_eastwood'),
+    writeln('29. jon_watts          30. cary_fukunaga'),
+    writeln('31. denis_villeneuve   32. wes_anderson'),
+    writeln('33. chloe_zhao         34. cate_shortland'),
+    writeln('35. destin_daniel_cretton 36. steven_soderbergh'),
+    writeln('37. darren_lynn_bousman  38. craig_gillespie'),
+    writeln('39. james_gunn         40. rodono_safran'),
+    writeln('41. jason_reitman      42. rawson_marshall_thurber'),
+    writeln('43. lana_wachowski     44. andy_serkins'),
+    writeln('45. derek_drymon       46. sam_raimi').
+
+
+
+
+ 
