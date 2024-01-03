@@ -35,7 +35,7 @@ recommendation_system.pl: The main Prolog file containing predicates for recomme
 - How It Works
 
 The user provides input for age, mood, director, streaming platform, and other preferences.
-The recommendation system queries the databases of movies and series to generate personalized suggestions.
+The recommendation system queries the fact base of movies and series to generate personalized suggestions.
 The system utilizes Prolog predicates to filter and recommend movies or series based on user criteria.
 
 - Example Usage
