@@ -1,6 +1,6 @@
 # Prolog Movie and Series Recommendation System
 
-This Prolog project is a movie and series recommendation system that suggests personalized movies or series based on user preferences such as age, mood, preferred director, and streaming platform. The system utilizes a database of movies and series, and it allows users to input their criteria to receive recommendations.
+This Prolog project is a movie and series recommendation system that suggests personalized movies or series based on user preferences such as age, mood, preferred director, and streaming platform. The system utilizes a fact base of movies and series, and it allows users to input their criteria to receive recommendations.
 
 **Contents**
 
@@ -21,7 +21,7 @@ Prolog interpreter (e.g., SWI-Prolog) installed on your machine.
 
 - Project Structure
 
-recommendation_system.pl: The main Prolog file containing predicates for recommendation and user interaction, as well as the databases of movies and series.
+recommendation_system.pl: The main Prolog file containing predicates for recommendation and user interaction, as well as the fact base of movies and series.
 
 - Features
 
